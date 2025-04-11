@@ -28,25 +28,25 @@ If you are developing a production application, we recommend using TypeScript an
 >    * blue background, white box, HTML, CSS
 >    * display: flex; flex-direction: column; align-items: center; height: 100%; 
 >    * import ReactDOM from "react-dom/client"
->
+
 > 2. ten buttons
 >    * grid-template: auto auto / repeat(5, 1fr);
 >    * alignment, no border, border-radius: 7px, padding
 >    * Die.jsx, ``` <div className="die-container"><Die Value={1}/> ```
->
+
 > 3. random numbers
 >    * ``` for (let i = 0; i < 10; i++) ```
 >    * OR ``` return new Array(10).fill90.map(() => Math.ceil(Math.random90 * 6)) ```
 >    * box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
->      
+      
 > 4. useState
 >    * ``` const [diceNumbers, getDiceNumbers] = useState(generateAllNewDice) ```
 >    * ``` const diceElements = diceNumbers.map(prevNum => <Die value={prevNum} />) ```
-> 
+
 > 5. roll button
 >    * ``` <button className="roll-dice" onClick={newDice}>Roll</button> ```
 >    * ``` function newDice() {setDice(generateAllNewDice())} ```
->
+
 > 6. hold numbers
 >    * object creation ready for isHeld
 >        * ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
@@ -61,7 +61,7 @@ If you are developing a production application, we recommend using TypeScript an
 >        * ``` {setDice(prevDie => prevDie.map(prevDice => {return prevDice.id == id ? {...prevDice, isHeld: !prevDice.isHeld} : prevDice}))} ```
 >    * function rollDice() for Roll button to leave isHeld
 >        * ``` {setDice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)}))} ```
->      
+     
 > 7. game won
 >    *  let wonGame = false
 >       * ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame = true} ```
