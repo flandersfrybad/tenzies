@@ -48,18 +48,18 @@ If you are developing a production application, we recommend using TypeScript an
 >    * ``` function newDice() {setDice(generateAllNewDice())} ```
 >
 > 6. hold numbers
->    * object creation
+>    * object creation ready for isHeld
 >        * ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
 >        * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```    
 >    * pass props.isHeld
 >        * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles}>{props.value}</button>) ```
->    * pass props.hold to hold button with id
+>    * pass props.hold for manual on off
 >        * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
->    * function hold(id)
+>    * function hold(id) for button on off
 >        * ``` {setDice(prevDie => prevDie.map(prevDice => {return prevDice.id == id ? {...prevDice, isHeld: !prevDice.isHeld} : prevDice}))} ```
->    * function rollDice()
+>    * function rollDice() for Roll button to leave isHeld
 >        * ``` {setDice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)}))} ```
 >      
 > 7. game won
