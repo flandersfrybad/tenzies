@@ -29,9 +29,9 @@ If you are developing a production application, we recommend using TypeScript an
 >    * import ReactDOM from "react-dom/client"
 
 > 2. ten buttons
->   * grid-template: auto auto / repeat(5, 1fr);
->   * alignment, no border, border-radius: 7px, padding
->   * Die.jsx, ``` <div className="die-container"><Die Value={1}/> ```
+>    * grid-template: auto auto / repeat(5, 1fr);
+>    * alignment, no border, border-radius: 7px, padding
+>    * Die.jsx, ``` <div className="die-container"><Die Value={1}/> ```
 
 >5. random numbers
 >6. roll button
