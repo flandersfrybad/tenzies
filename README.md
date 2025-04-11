@@ -22,18 +22,20 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## 1 layer deeper
 
->1. setup React
+> 1. setup React
 >    * ``` ReactDOM.createRoot(document.getElementById("root)).render(<App />) ```
 >    * blue background, white box, HTML, CSS
 >    * display: flex; flex-direction: column; align-items: center; height: 100%; 
 >    * import ReactDOM from "react-dom/client"
-
+>
 > 2. ten buttons
 >    * grid-template: auto auto / repeat(5, 1fr);
 >    * alignment, no border, border-radius: 7px, padding
 >    * Die.jsx, ``` <div className="die-container"><Die Value={1}/> ```
-
->5. random numbers
->6. roll button
->7. hold numbers
->8. game won
+>
+> 3. random numbers
+>    * ``` for (leti = 0; i < 10; i++) ```
+>        * OR ``` return new Array(10).fill90.map(() => Math.ceil(Math.random90 * 6)) ```
+> 6. roll button
+> 7. hold numbers
+> 8. game won
