@@ -14,7 +14,7 @@ If you are developing a production application, we recommend using TypeScript an
 ## Mental steps to build Tenzies
 
 1. setup React
-2. 10 buttons
+2. ten buttons
 3. random numbers
 4. roll button
 5. hold numbers
@@ -23,7 +23,7 @@ If you are developing a production application, we recommend using TypeScript an
 ## 1 layer deeper
 
 >1. setup React
->* ReactDOM.createRoot(document.getElementById("root)
+>  * ReactDOM.createRoot(document.getElementById("root)
 >* Blue background, white box, HTML, CSS
 >3. 10 buttons
 >* alignment, no border, border-radius: 7px, padding
