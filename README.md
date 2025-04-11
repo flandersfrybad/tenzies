@@ -68,3 +68,4 @@ If you are developing a production application, we recommend using TypeScript an
 >       * ``` {gameWon ? "New Game" : "Roll"}</button> ``
 >    * simplified
 >       * ``` const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value) ```
+>    * ``` {gameWon && <Confetti />} ```
