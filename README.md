@@ -64,4 +64,5 @@ If you are developing a production application, we recommend using TypeScript an
 >      
 > 7. game won
 >    *  let wonGame = false
->       ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame= true} ```
+>       * ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame = true} ```
+>       * ``` {gameWon ? "New Game" : "Roll"}</button> ```
