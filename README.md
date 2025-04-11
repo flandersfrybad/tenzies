@@ -50,26 +50,34 @@ If you are developing a production application, we recommend using TypeScript an
 > 6. hold numbers
 >    * object creation ready for isHeld
 >        * ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
->        * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```    
+>        * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```
+   
 >    * pass props.isHeld
 >        * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles}>{props.value}</button>) ```
+
 >    * pass props.hold for manual on off
 >        * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
+
 >    * function hold(id) for button on off
 >        * ``` {setDice(prevDie => prevDie.map(prevDice => {return prevDice.id == id ? {...prevDice, isHeld: !prevDice.isHeld} : prevDice}))} ```
+
 >    * function rollDice() for Roll button to leave isHeld
 >        * ``` {setDice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)}))} ```
      
 > 7. game won
 >    *  let wonGame = false
->       * ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame = true} ```
->       * ``` {gameWon ? "New Game" : "Roll"}</button> ```
+>      * ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame = true} ```
+>      * ``` {gameWon ? "New Game" : "Roll"}</button> ```
+
 >    * simplified
->       * ``` const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value) ```
+>      * ``` const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value) ```
+
 >    * ``` {gameWon && <Confetti />} ```
+
 >    * if gameWon create new game otherwise continue
 >       * ```    function rollDice() {gameWon ? setDice(generateAllNewDice()) : setDice(oldDice => oldDice.map(die => die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }))} ```
+
 >    * useRef and useEffect to synchronize keyboard focus on new game button if gameWon
 >       * ``` ref={buttonRef} const buttonRef = useRef(null) useEffect(() => {if (gameWon) {buttonRef.current.focus()}}, [gameWon]) ```
