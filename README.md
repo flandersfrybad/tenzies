@@ -16,9 +16,10 @@ If you are developing a production application, we recommend using TypeScript an
 1. setup React
 2. ten buttons
 3. random numbers
-4. roll button
-5. hold numbers
-6. game won
+4. useState
+5. roll button
+6. hold numbers
+7. game won
 
 ## 1 layer deeper
 
@@ -34,7 +35,7 @@ If you are developing a production application, we recommend using TypeScript an
 >    * Die.jsx, ``` <div className="die-container"><Die Value={1}/> ```
 >
 > 3. random numbers
->    * ``` for (leti = 0; i < 10; i++) ```
+>    * ``` for (let i = 0; i < 10; i++) ```
 >    * OR ``` return new Array(10).fill90.map(() => Math.ceil(Math.random90 * 6)) ```
 >    * box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 >      
@@ -42,7 +43,12 @@ If you are developing a production application, we recommend using TypeScript an
 >    * ``` const [diceNumbers, getDiceNumbers] = useState(generateAllNewDice) ```
 >    * ``` const diceElements = diceNumbers.map(prevNum => <Die value={prevNum} />) ```
 > 
-> 6. roll button
->    * 
-> 7. hold numbers
-> 8. game won
+> 5. roll button
+>    * ``` <button className="roll-dice" onClick={newDice}>Roll</button> ```
+>    * ``` function newDice() {setDice(generateAllNewDice())} ```
+>
+> 6. hold numbers
+>    * object ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
+>    * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```
+> 
+> 7. game won
