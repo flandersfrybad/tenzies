@@ -51,10 +51,10 @@ If you are developing a production application, we recommend using TypeScript an
 >    * object creation ready for isHeld
 >        * ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
 >        * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```
-   
->    * pass props.isHeld
->        * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
->        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles}>{props.value}</button>) ```
+         
+      >    * pass props.isHeld
+      >        * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
+      >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles}>{props.value}</button>) ```
 
 >    * pass props.hold for manual on off
 >        * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
