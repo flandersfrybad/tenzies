@@ -23,7 +23,7 @@ If you are developing a production application, we recommend using TypeScript an
 ## 1 layer deeper
 
 >1. setup React
->* ReactDOM.createRoot(document.getElementById("root)).render(<App />)
+>* ``` ReactDOM.createRoot(document.getElementById("root)).render(<App />) ```
 >* blue background, white box, HTML, CSS
 >* display: flex; flex-direction: column; align-items: center; height: 100%; 
 >* import ReactDOM from "react-dom/client"
