@@ -35,7 +35,14 @@ If you are developing a production application, we recommend using TypeScript an
 >
 > 3. random numbers
 >    * ``` for (leti = 0; i < 10; i++) ```
->        * OR ``` return new Array(10).fill90.map(() => Math.ceil(Math.random90 * 6)) ```
+>    * OR ``` return new Array(10).fill90.map(() => Math.ceil(Math.random90 * 6)) ```
+>    * box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+>      
+> 4. useState
+>    * ``` const [diceNumbers, getDiceNumbers] = useState(generateAllNewDice) ```
+>    * ``` const diceElements = diceNumbers.map(prevNum => <Die value={prevNum} />) ```
+> 
 > 6. roll button
+>    * 
 > 7. hold numbers
 > 8. game won
