@@ -21,7 +21,7 @@ If you are developing a production application, we recommend using TypeScript an
 6. hold numbers
 7. game won
 
-## 1 layer deeper
+## Deeper
 
 > 1. setup React
 >    * ``` ReactDOM.createRoot(document.getElementById("root)).render(<App />) ```
@@ -63,3 +63,5 @@ If you are developing a production application, we recommend using TypeScript an
 >        * ``` {setDice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)}))} ```
 >      
 > 7. game won
+>    *  let wonGame = false
+>       ``` if (dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)) {console.log("Game Won!") wonGame= true} ```
