@@ -23,11 +23,16 @@ If you are developing a production application, we recommend using TypeScript an
 ## 1 layer deeper
 
 >1. setup React
->  * ReactDOM.createRoot(document.getElementById("root)
->* Blue background, white box, HTML, CSS
->3. 10 buttons
+>* ReactDOM.createRoot(document.getElementById("root)).render(<App />)
+>* blue background, white box, HTML, CSS
+>* display: flex; flex-direction: column; align-items: center; height: 100%; 
+>* import ReactDOM from "react-dom/client"
+
+> 3. ten buttons
+>* grid-template: auto auto / repeat(5, 1fr);
 >* alignment, no border, border-radius: 7px, padding
->*  
+>* Die.jsx, <div className="die-container"><Die Value={1}/>
+
 >5. random numbers
 >6. roll button
 >7. hold numbers
