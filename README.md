@@ -57,5 +57,7 @@ If you are developing a production application, we recommend using TypeScript an
 >    * pass props.hold to hold button with id
 >        * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
+>    * function hold(id)
+>        * ``` {setDice(prevDie => prevDie.map(prevDice => {return prevDice.id == id ? {...prevDice, isHeld: !prevDice.isHeld} : prevDice}))} ```
 >      
 > 7. game won
