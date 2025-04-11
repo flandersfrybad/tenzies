@@ -22,13 +22,13 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## 1 layer deeper
 
-1. setup React
-  a. ReactDOM.createRoot(document.getElementById("root)
-  b. Blue background, white box, HTML, CSS
-3. 10 buttons
-  a. alignment, no border, border-radius: 7px, padding
-  b. 
-5. random numbers
-6. roll button
-7. hold numbers
-8. game won
+>1. setup React
+>* ReactDOM.createRoot(document.getElementById("root)
+>* Blue background, white box, HTML, CSS
+>3. 10 buttons
+>* alignment, no border, border-radius: 7px, padding
+>*  
+>5. random numbers
+>6. roll button
+>7. hold numbers
+>8. game won
