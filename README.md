@@ -59,5 +59,7 @@ If you are developing a production application, we recommend using TypeScript an
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
 >    * function hold(id)
 >        * ``` {setDice(prevDie => prevDie.map(prevDice => {return prevDice.id == id ? {...prevDice, isHeld: !prevDice.isHeld} : prevDice}))} ```
+>    * function rollDice()
+>        * ``` {setDice(oldDice => oldDice.map(die => die.isHeld ? die : {...die, value: Math.ceil(Math.random() * 6)}))} ```
 >      
 > 7. game won
