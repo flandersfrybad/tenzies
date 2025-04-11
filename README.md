@@ -70,13 +70,4 @@ If you are developing a production application, we recommend using TypeScript an
 >       * ``` const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value) ```
 >    * ``` {gameWon && <Confetti />} ```
 >    * if gameWon create new game otherwise continue
->       * ```    function rollDice() {
-        gameWon ? 
-        setDice(generateAllNewDice()) :
-        
-        setDice(oldDice => oldDice.map(die =>
-            die.isHeld ?
-                die :
-                { ...die, value: Math.ceil(Math.random() * 6) }
-        ))
-    } ```
+>       * ```    function rollDice() {gameWon ? setDice(generateAllNewDice()) : setDice(oldDice => oldDice.map(die => die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }))} ```
