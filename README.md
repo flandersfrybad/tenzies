@@ -48,11 +48,14 @@ If you are developing a production application, we recommend using TypeScript an
 >    * ``` function newDice() {setDice(generateAllNewDice())} ```
 >
 > 6. hold numbers
->    * object ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
+>    * object creation
+>        * ``` for (let i = 0; i < 10; i++) {diceElement.push({value: Math.ceil(Math.random() * 6), isHeld: false, id: nanoid()}) ```    
 >        * OR ``` return new Array(10).fill(0).map(() => ({value: Math.ceil(Math.random() * 6), id: nanoid(), isHeld: true, })) ```    
->    * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
+>    * pass props.isHeld
+>        * ``` const diceElements = dice.map(dieObj => <Die key={dieObj.id} isHeld={dieObj.isHeld} value={dieObj.value} />) ```
 >        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles}>{props.value}</button>) ```
->    * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
->        * ```    const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
+>    * pass props.hold to hold button with id
+>        * ``` const diceElements = dice.map(dieObj => (<Die hold={(() => hold(dieObj.id))} key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)) ```
+>        * ``` const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"} return (<button style={styles} onClick={props.hold}>{props.value}</button>) ```
 >      
 > 7. game won
