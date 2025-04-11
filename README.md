@@ -71,3 +71,5 @@ If you are developing a production application, we recommend using TypeScript an
 >    * ``` {gameWon && <Confetti />} ```
 >    * if gameWon create new game otherwise continue
 >       * ```    function rollDice() {gameWon ? setDice(generateAllNewDice()) : setDice(oldDice => oldDice.map(die => die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }))} ```
+>    * useRef and useEffect to synchronize keyboard focus on new game button if gameWon
+>       * ``` ref={buttonRef} const buttonRef = useRef(null) useEffect(() => {if (gameWon) {buttonRef.current.focus()}}, [gameWon]) ```
